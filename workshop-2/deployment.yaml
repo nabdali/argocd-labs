@@ -18,7 +18,11 @@ spec:
         app: my-deployment
     spec:
       containers:
-      - image: wrong_image
+      - image: nginx
         name: nginx
         resources: {}
+      initContainers:
+      - name: init-wait
+        image: busybox
+        command: ['sh', '-c', 'echo "Init Container is starting..."; sleep 60']
 status: {}
