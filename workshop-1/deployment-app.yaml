@@ -1,7 +1,7 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: workshop-02
+  name: workshop-2
   namespace: argocd
   finalizers:
     - resources-finalizer.argocd.argoproj.io
@@ -13,10 +13,7 @@ spec:
   source:
     repoURL: https://github.com/nabdali/argocd-labs.git
     targetRevision: HEAD
-    path: guestbook # git only
-
-    # helm specific config
-    chart: chart-name
+    path: workshop-2 # git only
     directory:
       recurse: true
       exclude: 'config.yaml'
