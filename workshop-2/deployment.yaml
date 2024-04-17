@@ -18,7 +18,7 @@ spec:
         app: my-deployment
     spec:
       containers:
-      - image: nginx
+      - image: wrong_image
         name: nginx
         resources: {}
 status: {}
