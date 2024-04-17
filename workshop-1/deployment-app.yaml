@@ -14,14 +14,13 @@ spec:
     repoURL: https://github.com/nabdali/argocd-labs.git
     targetRevision: HEAD
     path: workshop-2 # git only
-    directory:
-      recurse: true
-      exclude: 'config.yaml'
-      include: 'deployment.yaml'
+  directory:
+    recurse: true
+    exclude: 'config.yaml'
+    include: 'deployment.yaml'
   destination:
     server: https://kubernetes.default.svc
-    name: my-kube-cluster
-    namespace: guestbook
+    namespace: argocd
 
   # Extra information to show in the Argo CD Application details tab
   info:
