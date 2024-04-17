@@ -12,6 +12,7 @@ spec:
         metadata:
             name: 'my-app-{{.env}}'
         spec:
+            project: 'my-app-{{.env}}'
             source:
                 repoURL: "https://github.com/nabdali/argocd-labs.git"
                 path: '{{.env}}/'
