@@ -13,8 +13,8 @@ spec:
             name: 'my-app-{{.env}}'
         spec:
             source:
-                repoURL: "https://github.com/myorg/myapp"
+                repoURL: "https://github.com/nabdali/argocd-labs.git"
                 path: '{{.env}}/'
             destination:
-                server: 'cluster-{{.env}}'
-                namespace: my-app
+                server: 'https://kubernetes.default.svc'
+                namespace: argocd
